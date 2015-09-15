@@ -1,0 +1,40 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+</head>
+
+<template name="app-body">
+    <!--Map background -->
+    <div class="map">
+        {{> map}}
+    </div>
+
+    <!-- Header -->
+    <nav class="over-map">
+        <div class="nav-wrapper">
+            <a href="{{pathFor 'home' }}" class="brand-logo center">Qualserapp</a>
+            <ul id="nav-mobile" class="right">
+                {{> loginButtons}}
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+
+    <!-- Container where contents are loaded into -->
+    <div class="container over-map">
+        {{> yield}}
+
+    </div>
+
+    <nav class="over-map menu grey lighten-2">
+        <div class="nav-wrapper row">
+            <div class="col l6 m6 s6 center"><i class="material-icons">home</i></div>
+            <div class="col l6 m6 s6 center"><i class="material-icons">search</i></div>
+        </div>
+    </nav>
+
+    <div id="modal-container">
+    </div>
+
+</template>

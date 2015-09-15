@@ -1,0 +1,16 @@
+<template name="agenda">
+	<div class="agenda">
+		<div class="agenda-header jumbotron agenda">
+			<h1>{{ userName }} Agenda</h1>
+		</div>
+		<div class="container">
+			{{#each userEvents}}
+				<h2 class="agenda">{{title}}</h2>
+				<p>{{description}}</p>
+				<hr><br><br>
+			{{/each}}
+		</div>
+
+    	<span class="btn btn-default btn-round" ><b><a href="{{pathFor 'newEvent'}}">+</a></b></span>
+	</div>
+</template>

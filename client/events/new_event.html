@@ -1,0 +1,11 @@
+<template name="newEvent">
+    {{> quickForm doc=this collection="Events" id="insertEventForm" type="method" meteormethod="addEvent" }}
+
+    <div class="row">
+        <div class="center-align">
+            <a data-target="open-modal" class="btn-large waves-effect waves-light">Lista de Convidados</a>
+        </div>
+    </div>
+    <a href="{{pathFor 'agenda'}}" class="rigth-align">voltar</a>
+
+</template>

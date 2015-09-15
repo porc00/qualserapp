@@ -1,0 +1,17 @@
+<template name="modal">
+    <div id="modal" class="modal bottom-sheet">
+        <div class="modal-content">
+            <form action="#">
+                {{#each options}}
+                    <p>
+                        <input type="checkbox" id="{{value}}" value="{{value}}" {{isChecked}} />
+                        <label for="{{value}}">{{name}}</label>
+                    </p>
+                {{/each}}
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+</template>
